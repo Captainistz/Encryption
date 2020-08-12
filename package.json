@@ -1,0 +1,23 @@
+{
+  "name": "encryption",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Captainistz/Encryption.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Captainistz/Encryption/issues"
+  },
+  "homepage": "https://github.com/Captainistz/Encryption#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security"
+  }
+}
