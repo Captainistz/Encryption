@@ -1,17 +1,7 @@
-var https = require('https')
-var fs = require('fs')
+var express = require('express');
+var app = express();
 
-const port = process.env.PORT || 3000
+app.use(require('morgan')('dev'));
+app.use(express.static(__dirname + '/public'));
 
-https.createServer((req, res) => {
-  const filePath = __dirname + (req.url === '/' ? '/index.html' : req.url)
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
-      res.writeHead(404)
-      res.end(JSON.stringify(err))
-      return
-    }
-    res.writeHead(200)
-    res.end(data)
-  })
-}).listen(port)
+app.listen(process.env.PORT || 80);
