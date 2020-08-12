@@ -1,9 +1,9 @@
-var http = require('http')
+var https = require('https')
 var fs = require('fs')
 
 const port = process.env.PORT || 3000
 
-http.createServer((req, res) => {
+https.createServer((req, res) => {
   const filePath = __dirname + (req.url === '/' ? '/index.html' : req.url)
   fs.readFile(filePath, (err, data) => {
     if (err) {
