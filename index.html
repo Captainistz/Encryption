@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.17.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.17.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.17.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.17.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.17.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #message {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+    }
+  </style>
+  <script>
+    window.console = window.console || function (t) { };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('body').bind('cut copy', function (e) {
+        e.preventDefault();
+      });
+    });
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  <title>Encryption</title>
+  <style>
+    .full-height {
+      height: 100%;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 576px) {
+      .tablet-hide {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="images/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Pridi:200,300,400&amp;subset=thai" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="css/textarea.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/Bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+</head>
+
+<body class="back-row-toggle splat-toggle">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('body').bind('cut copy', function (e) {
+        e.preventDefault();
+      });
+    });
+  </script>
+  <div style="height: 120%">
+
+    <div class="rain front-row" style="height: 80%"></div>
+    <div class="rain back-row" style="height: 80%"></div>
+    <div class="progress-container" style="position: fixed; top: 0; ">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <script src="js/scroll.js"></script>
+    <nav id="navbar">
+      <div class="tablet-hide full-height flex-wrapper"> <a class="navicon-button">
+          <div class="navicon"></div>
+        </a> </div>
+      <ul class="nav-list">
+        <li class="nav-item"> <a href="#home" style="text-decoration: none; color: aliceblue">Home</a> </li>
+        <li class="nav-item"> <a href="#transform" style="text-decoration: none; color: aliceblue">Transform</a> </li>
+        <li class="nav-item"> <a href="#Alphabets" style="text-decoration: none; color: aliceblue">Alphabets</a> </li>
+        <li class="nav-item"> <a href="#Ciphers" style="text-decoration: none; color: aliceblue">Ciphers</a> </li>
+        <li class="nav-item"> <a href="#Square" style="text-decoration: none; color: aliceblue">Square Ciphers</a> </li>
+        <li class="nav-item"> <a href="#Encoding" style="text-decoration: none; color: aliceblue">Encoding</a> </li>
+        <li class="nav-item"> <a href="#Modern" style="text-decoration: none; color: aliceblue">Hash Func.</a> </li>
+        <li class="nav-item"> <a href="#About" style="text-decoration: none; color: aliceblue">About</a> </li>
+      </ul>
+    </nav>
+
+    <div class="container scramble" id="home" style="height: 75%">
+      <div class="text"></div>
+    </div>
+    <script id="rendered-js">
+      // ——————————————————————————————————————————————————
+      // TextScramble
+      // ——————————————————————————————————————————————————
+
+      class TextScramble {
+        constructor(el) {
+          this.el = el;
+          this.chars = '!<>-_\\/[]{}—=+*^?#________';
+          this.update = this.update.bind(this);
+        }
+        setText(newText) {
+          const oldText = this.el.innerText;
+          const length = Math.max(oldText.length, newText.length);
+          const promise = new Promise(resolve => this.resolve = resolve);
+          this.queue = [];
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || '';
+            const to = newText[i] || '';
+            const start = Math.floor(Math.random() * 40);
+            const end = start + Math.floor(Math.random() * 40);
+            this.queue.push({ from, to, start, end });
+          }
+          cancelAnimationFrame(this.frameRequest);
+          this.frame = 0;
+          this.update();
+          return promise;
+        }
+        update() {
+          let output = '';
+          let complete = 0;
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i];
+            if (this.frame >= end) {
+              complete++;
+              output += to;
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar();
+                this.queue[i].char = char;
+              }
+              output += `<span class="dud">${char}</span>`;
+            } else {
+              output += from;
+            }
+          }
+          this.el.innerHTML = output;
+          if (complete === this.queue.length) {
+            this.resolve();
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update);
+            this.frame++;
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)];
+        }
+      }
+
+
+      // ——————————————————————————————————————————————————
+      // Example
+      // ——————————————————————————————————————————————————
+
+      const phrases = [
+        'Hi!',
+        'welcome to',
+        '\'ENCRYPTION\''];
+
+
+      const el = document.querySelector('.text');
+      const fx = new TextScramble(el);
+
+      let counter = 0;
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          if (counter == 3) {
+            setTimeout(next, 2500);
+          } else {
+            setTimeout(next, 800);
+          }
+        });
+        counter = (counter + 1) % phrases.length;
+      };
+
+      next();
+//# sourceURL=pen.js
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/rain.js"></script>
+    <a href="#transform">
+      <div class="arrowcon">
+        <div class="arrow"></div>
+      </div>
+    </a>
+  </div>
+  <!-----------------------------------Transform------------------------------------------>
+  <section id="transform" class="section">
+    <div>
+      <h1 class="header" style="margin-top: 3%;">Transform</h1>
+      <div class="left-side">
+        <h2 class="header2">Replace</h2>
+        <p>Finds and replaces a given text</p>
+        <form>
+          <textarea placeholder="Find..." id="replacekey"></textarea>
+          <textarea placeholder="Replace..." id="replacekeytext"></textarea>
+        </form>
+        <form>
+          <textarea placeholder="Your text.." id="textreplace"
+            style="margin-top: 0.5%; font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Replace()">Encode</button>
+        <p id="demoreplace" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/replace.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">Reverse</h2>
+        <p>Reverses the order of bytes, characters or lines</p>
+        <form>
+          <textarea placeholder="Your text.." id="textreverse"
+            style="height:125px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Reverse()">Encode</button>
+        <p id="demoreverse" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/reverse.js"></script>
+      </div>
+    </div>
+  </section>
+  <!------------------------------------------Alphabets-------------------------------------->
+  <section id="Alphabets" class="section">
+    <div>
+      <h1 class="header" style="margin-top: 3%;">Alphabets</h1>
+      <div class="left-side">
+        <h2 class="header2">Morse Code</h2>
+        <p> used in telecommunication to encode text characters <br>
+          <br>
+          as standardized sequences of two different signal durations</p>
+        <form>
+          <textarea placeholder="Your text.." id="textmorse"
+            style="height:125px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Morse()">Encode</button>
+        <p id="demomorse"
+          style="margin-top: 3%; font-weight: 500; line-height: 30px;width: 50%;margin-left: auto;margin-right: auto;">
+        </p>
+        <script src="js/Encoder/morse.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">Spelling Alphabets</h2>
+        <p>A set of words used to stand for the letters of an alphabet<br>
+          <br>
+          in oral communication</p>
+        <form>
+          <textarea placeholder="Your text.." id="textalp"
+            style="height:125px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onClick="Spelling()">Encode</button>
+        <p id="demoalp"
+          style="margin-top: 3%; font-weight: 500;line-height: 30px;width: 50%;margin-left: auto;margin-right: auto;">
+        </p>
+        <script src="js/Encoder/alp.js"></script>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------------Ciphers--------------------------------------->
+  <section id="Ciphers" class="section3" style="min-height: 70vh;">
+    <div>
+      <h1 class="header">Ciphers</h1>
+      <div class="left-side">
+        <h2 class="header2">Caesar Cipher</h2>
+        <p>Plaintext is replaced by a letter some fixed number of positions<br>
+          <br>
+          down the alphabet</p>
+        <form style="margin-top: 5%;">
+          <textarea placeholder="Your text.." id="textcaesar"
+            style="height:120px; margin:0;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <div class="center3" style="margin-top: 1.5%;">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="quant[0]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+            <input type="number" id="caesarkey" name="quant[0]" class="form-control input-number" value="1" min="0"
+              max="26" style="text-align: center;">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[0]">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <button class="button buttonb" onclick="Caesar()">Encode</button>
+        <p id="democaesar" style="margin-top: 3%; font-weight: 500;"></p>
+        <p id="keycaesar"></p>
+        <script src="js/Encoder/ceasar.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">ROT13</h2>
+        <p>Plaintext is replaced by 13th positions<br>
+          <br>
+          of the alphabet</p>
+        <form style="margin-top: 5%;">
+          <textarea placeholder="Your text.." id="textrot"
+            style="height:150px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Rot()">Encode</button>
+        <p id="demorot" style="margin-top: 3%; font-weight: 500;"></p>
+
+        <script src="js/Encoder/rot13.js"></script>
+      </div>
+    </div>
+  </section>
+  <!--------------------------------------Ciphers2---------------------------------------->
+  <section id="Ciphers2" class="section2" style="margin-top: 10%; min-height: 60vh;">
+    <div>
+      <div class="left-side">
+        <h2 class="header2">A1Z26</h2>
+        <p>Replace text alphabetically</p>
+        <form>
+          <textarea placeholder="Your text.." id="texta1"
+            style="height:150px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="A1()">Encode</button>
+        <p id="demoa1" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/a1z26.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">Rail Fence Ciphers</h2>
+        <p>Written plaintext downwards and diagonally on successive rail</p>
+        <form>
+          <textarea placeholder="Your text.." id="textrail"
+            style="height:120px; margin:0;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <div class="center3" style="margin-top: 1.5%;">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-danger btn-number" data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+            <input type="number" id="railkey" name="quant[1]" class="form-control input-number" value="2" min="2"
+              max="100" style="text-align: center;">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <button class="button buttonb" onclick="Rail()">Encode</button>
+        <p id="demorail"
+          style="margin-top: 3%; font-weight: 500; line-height: 30px;width: 50%;margin-left: auto;margin-right: auto;">
+        </p>
+        <script src="js/Encoder/rail.js"></script>
+      </div>
+    </div>
+  </section>
+  <script>
+    //plugin bootstrap minus and plus
+    //http://jsfiddle.net/laelitenetwork/puJ6G/
+    $('.btn-number').click(function (e) {
+      e.preventDefault();
+
+      fieldName = $(this).attr('data-field');
+      type = $(this).attr('data-type');
+      var input = $("input[name='" + fieldName + "']");
+      var currentVal = parseInt(input.val());
+      if (!isNaN(currentVal)) {
+        if (type == 'minus') {
+
+          if (currentVal > input.attr('min')) {
+            input.val(currentVal - 1).change();
+          }
+          if (parseInt(input.val()) == input.attr('min')) {
+            $(this).attr('disabled', true);
+          }
+
+        } else if (type == 'plus') {
+
+          if (currentVal < input.attr('max')) {
+            input.val(currentVal + 1).change();
+          }
+          if (parseInt(input.val()) == input.attr('max')) {
+            $(this).attr('disabled', true);
+          }
+
+        }
+      } else {
+        input.val(0);
+      }
+    });
+    $('.input-number').focusin(function () {
+      $(this).data('oldValue', $(this).val());
+    });
+    $('.input-number').change(function () {
+
+      minValue = parseInt($(this).attr('min'));
+      maxValue = parseInt($(this).attr('max'));
+      valueCurrent = parseInt($(this).val());
+
+      name = $(this).attr('name');
+      if (valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+      } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+      }
+      if (valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
+      } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+      }
+
+    });
+    $(".input-number").keydown(function (e) {
+      // Allow: backspace, delete, tab, escape, enter and .
+      if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+        // Allow: Ctrl+A
+        e.keyCode == 65 && e.ctrlKey === true ||
+        // Allow: home, end, left, right
+        e.keyCode >= 35 && e.keyCode <= 39) {
+        // let it happen, don't do anything
+        return;
+      }
+      // Ensure that it is a number and stop the keypress
+      if ((e.shiftKey || e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+      }
+    });
+//# sourceURL=pen.js
+  </script>
+  <!------------------------------------------Square-------------------------------------->
+  <section id="Square" class="section" style="margin-top: 20px; min-height: 90vh;">
+    <div>
+      <h1 class="header" style="margin-top: 3%;">Square Ciphers</h1>
+      <div class="left-side">
+        <h2 class="header2">Polybius Square</h2>
+        <p>Invented by the Ancient Greeks Cleoxenus and Democleitus</p>
+        <form>
+          <textarea placeholder="Your text.." id="textpoly"
+            style="height:160px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Poly()">Encode</button>
+        <p id="demopoly" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/polybius.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">ADFGX Square</h2>
+        <p>Used by the German Army on the Western Front during World War I</p>
+        <form>
+          <textarea placeholder="Key..." id="squarekey"></textarea>
+        </form>
+        <form>
+          <textarea placeholder="Your text.." id="textsquare"
+            style="height:100px;font-size: 16px;line-height: 20px;margin-top: 0.5%;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Square()">Encode</button>
+        <p id="demosquare" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/ADFGX.js"></script>
+      </div>
+    </div>
+  </section>
+  <!-----------------------------------------Encoding----------------------------------->
+  <section id="Encoding" class="section3" style="margin-top: 0;">
+    <div>
+      <h1 class="header">Encoding</h1>
+      <div class="left-side">
+        <h2 class="header2">Base64</h2>
+        <p>Represent binary data in an ASCII string format <br>
+          <br>
+          by translating it into a radix-64 representation</p>
+        <form>
+          <textarea placeholder="Your text.." id="textbase"
+            style="height:150px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Base()">Encode</button>
+        <p id="demobase" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/base64.js"></script>
+      </div>
+      <div class="right-side">
+        <h2 class="header2">Unicode points</h2>
+        <p>Encoding to Unicode code points in given format</p>
+        <form>
+          <textarea placeholder="Your text.." id="textuni"
+            style="height:150px;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Unicode()">Encode</button>
+        <p id="demouni" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/unicode.js"></script>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------Encoding2---------------------------------------->
+  <section id="Encoding2" class="section2" style="margin:10%;">
+    <div>
+      <h2 class="header2">Integer</h2>
+      <div>
+        <p style="text-align: center;">Translates between bytes and integers</p>
+        <form>
+          <textarea placeholder="Your text.." id="textint"
+            style="height:150px; width: 40%;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="Integer()">Encode</button>
+        <p id="demoint" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/integer.js"></script>
+      </div>
+    </div>
+  </section>
+  <!------------------------------------Modern-------------------------------------->
+  <section id="Modern" class="section">
+    <div>
+      <h1 class="header" style="margin-top: 3%;">Hash Function</h1>
+      <div>
+        <h2 class="header2">MD5</h2>
+        <p>Creating a message digest</p>
+        <form>
+          <textarea placeholder="Your text.." id="textmd"
+            style="height:200px;width:40%;font-size: 16px;line-height: 20px;"></textarea>
+        </form>
+        <button class="button buttonb" onclick="MD()">Encode</button>
+        <p id="demomd" style="margin-top: 3%; font-weight: 500;"></p>
+        <script src="js/Encoder/MD5.js"></script>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------About-------------------------------------->
+  <section id="About" class="section" style="margin-top:100px;min-height: 50vh;">
+    <div style="margin-top: 3%;"></div>
+    <div id="particles-js"></div>
+    <div style="position: relative">
+      <h1 class="header">About</h1>
+      <img src="images/about.png" width="30%" height="30%">
+      <h3 class="header2">Hello, My name is Captain Phungpensuk.
+        <br><br>
+        I'm a senior high school student at Uttaradit School Sci&Math Gifted 10th grade.
+        <br><br>
+        <p>#POSN&nbsp; #CLICKCAMP12</p>
+      </h3>
+    </div>
+
+    <script type="text/javascript" src="js/particles.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </section>
+  <!-----------------------------------footer-------------------------------------->
+  <section id="Footer" class="section4">
+
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+        document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
+</html>
