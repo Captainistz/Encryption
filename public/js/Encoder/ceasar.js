@@ -22,7 +22,7 @@ var Caesar = function () {
         }
     }
     document.getElementById("democaesar").innerHTML = cipherFinish;
-    document.getElementById("keycaesar").innerHTML = key;
+    document.getElementById("keycaesar").innerHTML = cipherOffset;
 }
 
 Caesar();
